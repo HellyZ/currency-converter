@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script defer src="script.js"></script>
+  <title>Currency converter</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="d-flex justify-content-around">Конвертер валют</h1>
+    <div class="row">
+      <div class="col-6">
+        <div class="mb-3 me-3">
+          <form id="converter">
+            <input type="text" id="fromCur" class="form-control p-2" value="USD" disabled>
+            <input type="number" min="0" id="amount" class="form-control p-2" placeholder="В долларах">
+            <input type="text" id="toCur" class="form-control p-2" value="RUB" disabled>
+            <input type="number" id="result" class="form-control p-2" disabled>
+            <div class="form-check d-grid gap-2 d-md-flex justify-content-md-end p-2">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+              <label class="form-check-label" for="flexCheckChecked">
+                Обратная конвертация
+              </label>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end p-2">
+              <button type="submit" class="btn btn-info me-md-2 ">Конвертировать</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-6" style="background-color: whitesmoke"></div>
+    </div>
+  </div>
+</body>
+
+</html>
