@@ -2,6 +2,11 @@ const API_KEY = "7468185853fe8f2f2b17";
 
 const revertCheck = document.querySelector(".form-check-input");
 
+const clearForm = () => {
+  document.querySelector("#amount").value = "";
+  document.querySelector("#result").value = "";
+};
+
 const convertRequest = async (fromCur, toCur) => {
   const baseUrl = "https://free.currconv.com/api/v7/convert";
 
@@ -33,7 +38,8 @@ const revertConvert = (e) => {
 };
 
 revertCheck.addEventListener("change", (e) => {
-  revertConvert(e)
+  clearForm();
+  revertConvert(e);
 });
 
 document.getElementById("converter").addEventListener("submit", (e) => {
